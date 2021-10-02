@@ -1,11 +1,11 @@
 import streamlit as st
-import keras 
+from keras.models import load_model
 import tensorflow as tf
 
 
 @st.cache(allow_output_mutation=True)
 def load_models():
-  model=keras.models.load_model('image_recognition_model.h5')
+  model=load_model('image_recognition_model.h5')
   return model
 with st.spinner('Model is being loaded..'):
   model=load_models()
