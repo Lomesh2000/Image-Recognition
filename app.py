@@ -1,6 +1,6 @@
 import streamlit as st
 from keras.models import load_model
-from keras.activations import softmax
+from keras.layers import Softmax
 
 
 
@@ -53,7 +53,7 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
-    score = softmax(predictions[0])
+    score = Softmax(predictions[0])
     
     arg=np.argmax(score)
     print('Its a '+ str(results[arg]))
