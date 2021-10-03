@@ -1,6 +1,8 @@
 import streamlit as st
 from keras.models import load_model
 from keras.layers import Softmax
+import os
+os.environ['TF_XLA_FLAGS'] = '--tf_xla_enable_xla_devices'
 
 
 
