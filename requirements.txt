@@ -11,7 +11,7 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.5
 scipy>=0.15.1
 tensorflow-cpu
-os
+
 
 
 
